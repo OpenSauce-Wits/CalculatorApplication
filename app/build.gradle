@@ -1,5 +1,18 @@
 apply plugin: 'com.android.application'
 apply plugin: 'jacoco'
+apply plugin: 'com.github.kt3k.coveralls'
+
+jacoco{
+    toolVersion = "$jacocoVersion"
+}
+
+task.withType(Test){
+    jacoco.includeNoLocationClasses = true
+    jacoco.excludes = ['jdk.internal.*']
+    test.Logging {
+        exception.Format = 'full'
+    }
+}
 
 task jacocoTestReport(type: JacocoReport, dependsOn: ['testDebugUnitTest']) {
     reports {
