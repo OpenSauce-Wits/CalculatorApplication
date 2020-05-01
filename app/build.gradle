@@ -6,11 +6,11 @@ jacoco{
     toolVersion = "$jacocoVersion"
 }
 
-task.withType(Test){
+tasks.withType(Test){
     jacoco.includeNoLocationClasses = true
     jacoco.excludes = ['jdk.internal.*']
-    test.Logging {
-        exception.Format = 'full'
+    testLogging{
+        exceptionFormat = 'full'
     }
 }
 
