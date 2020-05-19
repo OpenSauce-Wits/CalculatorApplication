@@ -24,9 +24,63 @@ public class ExampleInstrumentedTest {
     public ActivityTestRule<MainActivity> activityRule = new ActivityTestRule<>(MainActivity.class);
 
     @Test
-    public void checkNumericButton () {
+    public void checkZeroButton () {
         onView(withId(R.id.button_0)).perform(click());
         onView(withId(R.id.textView)).check(matches(withText("0")));
+    }
+
+    @Test
+    public void checkOneButton () {
+        onView(withId(R.id.button_1)).perform(click());
+        onView(withId(R.id.textView)).check(matches(withText("1")));
+    }
+
+    @Test
+    public void checkTwoButton () {
+        onView(withId(R.id.button_2)).perform(click());
+        onView(withId(R.id.textView)).check(matches(withText("2")));
+    }
+
+    @Test
+    public void checkThreeButton () {
+        onView(withId(R.id.button_3)).perform(click());
+        onView(withId(R.id.textView)).check(matches(withText("3")));
+    }
+
+    @Test
+    public void checkFourButton () {
+        onView(withId(R.id.button_4)).perform(click());
+        onView(withId(R.id.textView)).check(matches(withText("4")));
+    }
+
+    @Test
+    public void checkFiveButton () {
+        onView(withId(R.id.button_5)).perform(click());
+        onView(withId(R.id.textView)).check(matches(withText("5")));
+    }
+
+    @Test
+    public void checkSixButton () {
+        onView(withId(R.id.button_6)).perform(click());
+        onView(withId(R.id.textView)).check(matches(withText("6")));
+    }
+
+    @Test
+    public void checkSevenButton () {
+        onView(withId(R.id.button_7)).perform(click());
+        onView(withId(R.id.textView)).check(matches(withText("7")));
+    }
+
+    @Test
+    public void checkEightButton () {
+        onView(withId(R.id.button_8)).perform(click());
+        onView(withId(R.id.textView)).check(matches(withText("8")));
+    }
+
+    @Test
+    public void checkNineButton () {
+        onView(withId(R.id.button_9)).perform(click());
+        onView(withId(R.id.textView)).check(matches(withText("9")));
     }
 
     @Test
@@ -81,5 +135,11 @@ public class ExampleInstrumentedTest {
         onView(withId(R.id.textView)).check(matches(withText("2.25")));
     }
 
+    @Test
+    public void checkPercent () {
+        onView(withId(R.id.button_5)).perform(click());
+        onView(withId(R.id.button_percent)).perform(click());
+        onView(withId(R.id.textView)).check(matches(withText("0.07")));
+    }
 
 }
