@@ -137,9 +137,9 @@ public class ExampleInstrumentedTest {
 
     @Test
     public void checkPercent () {
-        onView(withId(R.id.button_5)).perform(click());
+        onView(withId(R.id.button_8)).perform(click());
         onView(withId(R.id.button_percent)).perform(click());
-        onView(withId(R.id.textView)).check(matches(withText("0.07")));
+        onView(withId(R.id.textView)).check(matches(withText("0.08")));
     }
 
 }
