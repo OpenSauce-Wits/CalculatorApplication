@@ -142,4 +142,10 @@ public class ExampleInstrumentedTest {
         onView(withId(R.id.textView)).check(matches(withText("0.08")));
     }
 
+    @Test
+    public void checkPeriod () {
+        onView(withId(R.id.button_period)).perform(click());
+        onView(withId(R.id.textView)).check(matches(withText(".")));
+    }
+
 }
