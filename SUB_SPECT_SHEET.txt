@@ -17,5 +17,3 @@ app/build.gradle
 app/src/test/java/com/example/calculatorapplication/ExampleUnitTest.java
 
 app/src/androidTest/java/com/example/calculatorapplication/ExampleInstrumentedTest.java
-app/src/androidTest/java/com/example/calculatorapplication/MainActivityInstrumentedTest.java
-
